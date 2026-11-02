@@ -3,39 +3,168 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kalendar</title>
-<meta name="description" content="Kalendar – a calendar for your Windows desktop, with football matches, TV episodes, movie and game releases, birthdays and Google Calendar sync.">
+<title>Kalendar: a calendar for the things you look forward to</title>
+<meta name="description" content="Kalendar is a free calendar for your Windows desktop, with football matches, TV episodes, movie and game releases, birthdays and Google Calendar sync.">
 <link rel="icon" href="icon.png">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<main>
-  <header><img src="icon.png" alt=""><a href="./">Kalendar</a></header>
+<body class="home">
+<div class="wrap">
+  <nav class="top">
+    <a class="brand" href="./"><img src="icon.png" alt="">Kalendar</a>
+    <span class="top-links">
+      <a href="#features">Features</a>
+      <a href="#private">Privacy</a>
+      <a class="btn small" href="https://github.com/ecnot/kalendar/releases/latest">Download</a>
+    </span>
+  </nav>
 
-  <h1>A calendar for your desktop that's actually nice to look at.</h1>
-  <p class="lead">Kalendar is a free calendar app for Windows. It lives in your tray, shows today's date on its icon, and turns your plans into cards: football matches with team logos, TV episodes with posters, game and movie releases, tasks and birthdays.</p>
-  <a class="btn" href="https://github.com/ecnot/kalendar/releases/latest">Download for Windows</a>
-  <a class="btn ghost" href="https://github.com/ecnot/kalendar">Source code on GitHub</a>
+  <section class="hero">
+    <h1>A calendar for your desktop that's actually nice to look at.</h1>
+    <p class="lead">Kalendar is a free calendar app for Windows, made for the things you look forward to: the match on Sunday, the season finale, the game you pre-ordered, the cabin weekend.</p>
+    <p class="cta">
+      <a class="btn" href="https://github.com/ecnot/kalendar/releases/latest">Download for Windows</a>
+      <a class="btn ghost" href="https://github.com/ecnot/kalendar/releases">What's new</a>
+    </p>
+    <p class="note">Free · Windows 10 and 11 · No account needed</p>
+  </section>
 
-  <img class="shot" src="screenshot.jpg" alt="Kalendar's month view with an agenda of cards on the left">
+  <picture>
+    <source srcset="shot-month-dark.webp" media="(prefers-color-scheme: dark)">
+    <img class="shot window hero-shot" src="shot-month.webp" width="1800" height="1191" alt="Kalendar's month view, with an agenda of cards beside it">
+  </picture>
 
-  <div class="card">
-    <h2>What it does</h2>
-    <ul>
-      <li><strong>Football:</strong> follow your team's fixtures and results, with logos and kick-off reminders.</li>
-      <li><strong>TV and movies:</strong> follow a show and new episodes appear by themselves; add movie releases with posters.</li>
-      <li><strong>Reminders:</strong> as many as you like, with snooze.</li>
-      <li><strong>Birthdays:</strong> every year, with how old they turn (and confetti).</li>
-      <li><strong>Google Calendar sync:</strong> keep Kalendar and your phone in step, and answer invites from Gmail.</li>
-      <li><strong>English and Norwegian.</strong></li>
-    </ul>
-  </div>
+  <section class="block center">
+    <h2>Every plan gets its own card</h2>
+    <p class="lead">Matches, episodes and releases look like what they are, with pictures, colours and the details that matter. The next few weeks should look like something to look forward to, not a to-do list. Birthdays say how old they turn, with confetti when you click them.</p>
+    <div class="cards">
+      <div class="col">
+        <img src="card-match.webp" loading="lazy" width="657" height="286" alt="A Champions League match card with both team logos and the stadium">
+        <picture><source srcset="card-movie-dark.webp" media="(prefers-color-scheme: dark)"><img src="card-movie.webp" loading="lazy" width="657" height="212" alt="A movie card with a poster and tickets booked"></picture>
+        <picture><source srcset="card-event-dark.webp" media="(prefers-color-scheme: dark)"><img src="card-event.webp" loading="lazy" width="657" height="104" alt="A plain event card for lunch"></picture>
+        <picture><source srcset="card-task-dark.webp" media="(prefers-color-scheme: dark)"><img src="card-task.webp" loading="lazy" width="657" height="71" alt="A task card with a box to tick"></picture>
+      </div>
+      <div class="col">
+        <picture><source srcset="card-concert-dark.webp" media="(prefers-color-scheme: dark)"><img src="card-concert.webp" loading="lazy" width="657" height="146" alt="An event card for a concert, with its place"></picture>
+        <img src="card-tv.webp" loading="lazy" width="657" height="213" alt="A TV episode card with season, episode and progress through the season">
+        <picture><source srcset="card-birthday-dark.webp" media="(prefers-color-scheme: dark)"><img src="card-birthday.webp" loading="lazy" width="657" height="133" alt="A birthday card that says how old they turn"></picture>
+        <img src="card-game.webp" loading="lazy" width="657" height="213" alt="A game release card with platforms and a pre-ordered mark">
+      </div>
+    </div>
+    <div id="features" class="grid left">
+      <div class="tile"><h3>Football</h3><p>Follow your team's fixtures and results, with logos and kick-off reminders. On match days the app takes your team's colour.</p></div>
+      <div class="tile"><h3>TV shows</h3><p>Follow a show and new episodes appear by themselves.</p></div>
+      <div class="tile"><h3>Movies</h3><p>Search a film and get its release date for your country, with poster and summary.</p></div>
+      <div class="tile"><h3>Games</h3><p>Search a game and get its release date and cover.</p></div>
+    </div>
+  </section>
+
+  <section class="row flip">
+    <div>
+      <h2>Type it like you'd say it</h2>
+      <p><em>"Pizza night friday at 19"</em> fills in the day and the time, and saves as "Pizza night". Press Ctrl+Alt+K from anywhere in Windows, or a shortcut of your own, and it's in your calendar without opening the app.</p>
+      <p>Every card can have its own icon too, from about 1,900 emoji or 4,800 line icons. Kalendar suggests one as you type.</p>
+    </div>
+    <div class="stack">
+      <img class="shot" src="shot-quick.webp" loading="lazy" width="960" height="225" alt="The quick add window understanding 'Pizza night friday at 19'">
+      <img class="shot" src="shot-editor.webp" loading="lazy" width="800" height="619" alt="The event editor with the icon picker open, showing music emoji">
+    </div>
+  </section>
+
+  <section class="row">
+    <div>
+      <h2>Details with one click</h2>
+      <p>Click anything in your calendar and a small card opens beside it, with the time, place, reminders and notes. Tick off a task right there, or double-click when you want to change something.</p>
+      <p>And when you can't remember which day it was, <strong>Ctrl+F</strong> searches titles, places and notes.</p>
+    </div>
+    <div class="stack">
+      <img class="shot" src="shot-peek.webp" loading="lazy" width="758" height="507" alt="A details card open beside a game release in the month view">
+      <img class="shot" src="shot-search.webp" loading="lazy" width="840" height="414" alt="Search results for 'viking', listing the coming matches">
+    </div>
+  </section>
+
+  <section class="row flip">
+    <div>
+      <h2>See your days coming</h2>
+      <ul>
+        <li><strong>Month, week, 3-day and day views,</strong> with multi-day events drawn as connected bars.</li>
+        <li><strong>Weather from Yr</strong> on the days ahead, for your own place.</li>
+        <li><strong>Sunrise and sunset</strong> as times or as lines across the day, so you can see if the sun sets during your plans.</li>
+        <li><strong>Public holidays and flag days</strong> for Norway, Sweden, Denmark, Finland, Iceland, Germany, the UK and the US.</li>
+      </ul>
+    </div>
+    <img class="shot window" src="shot-3day.webp" loading="lazy" width="1400" height="926" alt="The 3-day view with weather, sunrise and sunset lines">
+  </section>
+
+  <section class="block center">
+    <h2>Make it yours</h2>
+    <p class="lead">Eight pale gradient themes, or your own colour or gradient. Light or dark, following Windows or your own choice, with as much transparency as you like. All-day events can be soft pastels or solid colours.</p>
+    <div class="themer">
+      <div class="theme-picks" role="group" aria-label="Try a theme">
+        <button type="button" data-theme="blossom" aria-pressed="false" style="--hl: #bd3177"><span class="dot"></span>Blossom</button>
+        <button type="button" data-theme="peach" aria-pressed="false" style="--hl: #a84f18"><span class="dot"></span>Peach</button>
+        <button type="button" data-theme="honey" aria-pressed="false" style="--hl: #8a6100"><span class="dot"></span>Honey</button>
+        <button type="button" data-theme="meadow" aria-pressed="false" style="--hl: #377a30"><span class="dot"></span>Meadow</button>
+        <button type="button" data-theme="glacier" aria-pressed="false" style="--hl: #1f4fb4"><span class="dot"></span>Glacier</button>
+        <button type="button" data-theme="lavender" aria-pressed="true" style="--hl: #5558c0"><span class="dot"></span>Lavender</button>
+        <button type="button" data-theme="dusk" aria-pressed="false" style="--hl: #824bc5"><span class="dot"></span>Dusk</button>
+        <button type="button" data-theme="slate" aria-pressed="false" style="--hl: #475569"><span class="dot"></span>Slate</button>
+      </div>
+      <div class="theme-stage">
+        <img data-theme="blossom" src="theme-blossom.webp" loading="lazy" width="1500" height="993" alt="">
+        <img data-theme="peach" src="theme-peach.webp" loading="lazy" width="1500" height="993" alt="">
+        <img data-theme="honey" src="theme-honey.webp" loading="lazy" width="1500" height="993" alt="">
+        <img data-theme="meadow" src="theme-meadow.webp" loading="lazy" width="1500" height="993" alt="">
+        <img data-theme="glacier" src="theme-glacier.webp" loading="lazy" width="1500" height="993" alt="">
+        <img class="on" data-theme="lavender" src="theme-lavender.webp" width="1500" height="993" alt="Kalendar in the Lavender theme">
+        <img data-theme="dusk" src="theme-dusk.webp" loading="lazy" width="1500" height="993" alt="">
+        <img data-theme="slate" src="theme-slate.webp" loading="lazy" width="1500" height="993" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="row">
+    <div>
+      <h2>Just as nice after dark</h2>
+      <p>Dark mode gets the same care as light. Match cards, posters and pictures look right at home, and small seasonal touches like confetti at New Year and an optional Christmas theme keep things cosy all year.</p>
+    </div>
+    <img class="shot window" src="shot-week-dark.webp" loading="lazy" width="1400" height="926" alt="The week view in dark mode with matches, a game release and a movie">
+  </section>
+
+  <section class="block">
+    <h2 class="center">And the everyday things</h2>
+    <div class="grid">
+      <div class="tile"><h3>Reminders</h3><p>Windows notifications, as many as you like, with snooze. Kalendar waits in the tray, even with the window closed.</p></div>
+      <div class="tile"><h3>Google Calendar sync</h3><p>If you want it: keep Kalendar and your phone in step, and answer invites from Gmail.</p></div>
+      <div class="tile"><h3>Repeating events</h3><p>Every day, week, month or year, with single days skippable.</p></div>
+      <div class="tile"><h3>Countdowns</h3><p>Right-click anything and choose "Count down to this".</p></div>
+      <div class="tile"><h3>.ics import and export</h3><p>Works alongside Outlook, Apple Calendar and others.</p></div>
+      <div class="tile"><h3>Lives on your taskbar</h3><p>Today's date on the icon, a small agenda in the tray, and it can start with Windows.</p></div>
+      <div class="tile"><h3>Updates itself</h3><p>New versions install themselves when you're ready.</p></div>
+      <div class="tile"><h3>English and Norwegian</h3><p>All of it, in both languages.</p></div>
+    </div>
+  </section>
+
+  <section id="private" class="private">
+    <h2>Your calendar stays on your PC</h2>
+    <p>There is no Kalendar server, no account, no tracking and no ads. Your events, pictures and settings are saved on your own PC, and Kalendar only goes online for the features you choose to use.</p>
+    <p><a href="privacy.html">Read the privacy policy</a></p>
+  </section>
+
+  <section class="final center">
+    <h2>Ready for something to look forward to?</h2>
+    <p class="cta"><a class="btn" href="https://github.com/ecnot/kalendar/releases/latest">Download for Windows</a></p>
+    <p class="note">Windows may say "Windows protected your PC", because Kalendar is a free hobby app without a paid code-signing certificate. Click <strong>More info</strong>, then <strong>Run anyway</strong>.</p>
+  </section>
 
   <footer>
     <a href="privacy.html">Privacy policy</a>
     <a href="terms.html">Terms</a>
     <a href="https://github.com/ecnot/kalendar/issues">Questions and ideas</a>
+    <a href="https://github.com/ecnot/kalendar#credits">Credits</a>
+    <p>Made in Norway. Team names, competitions and artwork in the screenshots are examples, and the club badges are placeholders, not official logos. Movie data from TMDB: this product uses the TMDB API but is not endorsed or certified by TMDB.</p>
   </footer>
-</main>
+</div>
+<script src="site.js" defer></script>
 </body>
 </html>
